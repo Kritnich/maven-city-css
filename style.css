@@ -1,4 +1,25 @@
+body {
+  font-family: Lucida Console, Monaco, monospace;
+  color: white;
+}
+
 .container {
-  background-image: url("https://wallpapercave.com/wp/IT8wP6U.jpg");
+  background-image: url("https://i.imgur.com/i3cIzwH.png");
   width: 100%;
+}
+
+a {
+  color: #3399ff;
+}
+
+a:hover {
+  background-color: transparent;
+  color: #80bfff;
+}
+
+.navbar-inner {
+  border: none;
+  border-radius: unset;
+  background-image: none;
+  background-color: #000000;
 }
