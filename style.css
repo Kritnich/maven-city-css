@@ -12,6 +12,20 @@ Palette
 #C0E5D8
 */
 
+/*
+Palette
+#09151E
+#14232A
+#030A10
+#1F3537
+#2D4948
+#40635C
+#5E8779
+#351D1E
+#87B2A0
+#C0E5D8
+*/
+
 body {
   font-family: Lucida Console, Monaco, monospace;
   color: #C0E5D8;
@@ -96,11 +110,21 @@ a:hover {
   padding: 1em;
   border: 1px solid #40635C;
   background-color: #09151E;
+  transform: skewX(-1deg);
+}
+
+#page-content * {
+  transform: skewX(1deg);
 }
 
 #side-bar {
   border: 1px solid #40635C;
   background-color: #09151E;
+  transform: skewX(-1deg);
+}
+
+#side-bar * {
+  transform: skewX(1deg);
 }
 
 hr {
@@ -123,17 +147,30 @@ input {
   font-family: Lucida Console, Monaco, monospace;
 }
 
-input.text {
+input.text, input.btn {
   padding: 4px 6px;
   color: #C0E5D8;
   background-color: #14232A;
+  background-image: none;
   border: 1px solid #40635C;
+  transform: skewX(-10deg);
+  text-shadow: none;
+  box-shadow: none;
+  transition: 0.5s;
 }
 
-input.text:before {
-  content: "";
-  height: 0px;
-  width: 10px;
-  border-bottom: 20px solid #14232A;
-  border-left: 20px solid transparent;
+input.btn {
+  color: #87B2A0;
+}
+
+input.btn:hover {
+  background-color: #14232A;
+  transition: 0.5s;
+  color: #C0E5D8;
+  border-color: #C0E5D8;
+}
+
+input.text:focus {
+  box-shadow: none;
+  border-color: #C0E5D8;
 }
