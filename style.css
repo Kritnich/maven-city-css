@@ -42,10 +42,23 @@ a:hover {
 .navbar-inner {
   position: relative;
   border: none;
-  background-image: unset;
-  background-color: #030A10;
+  background-image: linear-gradient(
+    hsl(0, 0%, 0%) 0%,
+    hsla(0, 0%, 0%, 0.738) 19%,
+    hsla(0, 0%, 0%, 0.541) 34%,
+    hsla(0, 0%, 0%, 0.382) 47%,
+    hsla(0, 0%, 0%, 0.278) 56.5%,
+    hsla(0, 0%, 0%, 0.194) 65%,
+    hsla(0, 0%, 0%, 0.126) 73%,
+    hsla(0, 0%, 0%, 0.075) 80.2%,
+    hsla(0, 0%, 0%, 0.042) 86.1%,
+    hsla(0, 0%, 0%, 0.021) 91%,
+    hsla(0, 0%, 0%, 0.008) 95.2%,
+    hsla(0, 0%, 0%, 0.002) 98.2%,
+    hsla(0, 0%, 0%, 0) 100%
+  );
+  background-color: transparent;
   height: 100%;
-  box-shadow: 0 0 10px 5px #99ccff, inset 0 -10px 10px -10px #99ccff;
 }
 
 .nav-collapse.collapse {
@@ -122,6 +135,7 @@ a:hover {
 
 .form-search .input-append .btn {
   border-radius: unset;
+  margin: 0;
 }
 
 .btn-group > .btn:last-child, .btn-group > .dropdown-toggle {
@@ -150,19 +164,19 @@ a:hover {
 }
 
 .row-fluid {
-  margin: 2em;
+  margin: 4em;
   width: auto;
 }
 
 #page-content {
+  position: relative;
   padding: 1em;
   background-color: rgba(3, 10, 16, .9);
-  box-shadow: 0 0 10px 5px #99ccff, inset 0 0 50px #99ccff;
 }
 
 #side-bar {
   background-color: rgba(3, 10, 16, .9);
-  box-shadow: 0 0 10px 5px #99ccff, inset 0 0 10px #99ccff;
+}
 
 hr {
   color: #14232A;
@@ -181,7 +195,7 @@ input.text, input.btn {
   color: #C0E5D8;
   background-color: #14232A;
   background-image: none;
-  border: 1px solid #40635C;
+  border: 1px solid #23a374;
   transform: skewX(-10deg);
   text-shadow: none;
   box-shadow: none;
@@ -192,7 +206,7 @@ input.btn {
   color: #87B2A0;
 }
 
-input.btn:hover {
+input.btn:hover, input.btn:active, input.btn:focus {
   background-color: #14232A;
   transition: 0.5s;
   color: #C0E5D8;
@@ -202,14 +216,4 @@ input.btn:hover {
 input.text:focus {
   box-shadow: none;
   border-color: #C0E5D8;
-}
-
-table.wiki-content-table th {
-  background-color:
-}
-
-.container-fluid {
-  height: 100%;
-  width: 100%;
-  padding: 0;
 }
