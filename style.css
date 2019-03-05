@@ -12,6 +12,11 @@ Palette
 #C0E5D8
 */
 
+@font-face {
+  font-family: Swera Shadowed;
+  src: url("https://cdn.staticaly.com/gh/Kritnich/maven-city-css/testing/Swera%20Shadowed%20Demo.otf");
+}
+
 body {
   font-family: Lucida Console, Monaco, monospace;
   color: #C0E5D8;
@@ -36,14 +41,11 @@ a:hover {
 
 .navbar-inner {
   position: relative;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 1px solid #40635C;
-  border-radius: unset;
+  border: none;
   background-image: unset;
   background-color: #030A10;
-  height: 100%
+  height: 100%;
+  box-shadow: 0 0 10px 5px #99ccff, inset 0 -10px 10px -10px #99ccff;
 }
 
 .nav-collapse.collapse {
@@ -59,6 +61,48 @@ a:hover {
   top: 50%;
   transform: translateY(-50%);
   text-shadow: none;
+  font-family: Swera Shadowed;
+  font-size: 3em;
+  color: #C0E5D8;
+  margin-left: 0.5em;
+  padding: 0;
+}
+
+.navbar .brand span:before {
+  display: block;
+  color: #0ff;
+  content: 'Maven City';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  opacity: .8;
+  z-index: -1;
+  animation: glitch 5s cubic-bezier(.25, .46, .45, .94) both infinite;
+}
+
+.navbar .brand span:after {
+  display: block;
+  color: #f0f;
+  content: 'Maven City';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  opacity: .8;
+  z-index: -2;
+  animation: glitch 5s cubic-bezier(.25, .46, .45, .94) reverse both infinite;
+}
+
+@keyframes glitch {
+    0% {transform: translate(0)}
+    20% {transform: translate(-3px, 3px)}
+    40% {transform: translate(-3px, -3px)}
+    60% {transform: translate(3px, 3px)}
+    80% {transform: translate(3px, -3px)}
+    to {transform: translate(0)}
 }
 
 #login-status {
@@ -112,14 +156,13 @@ a:hover {
 
 #page-content {
   padding: 1em;
-  border: 1px solid #40635C;
-  background-color: #09151E;
+  background-color: rgba(3, 10, 16, .9);
+  box-shadow: 0 0 10px 5px #99ccff, inset 0 0 50px #99ccff;
 }
 
 #side-bar {
-  border: 1px solid #40635C;
-  background-color: #09151E;
-}
+  background-color: rgba(3, 10, 16, .9);
+  box-shadow: 0 0 10px 5px #99ccff, inset 0 0 10px #99ccff;
 
 hr {
   color: #14232A;
@@ -168,4 +211,5 @@ table.wiki-content-table th {
 .container-fluid {
   height: 100%;
   width: 100%;
+  padding: 0;
 }
