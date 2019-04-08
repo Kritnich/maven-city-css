@@ -1,0 +1,23 @@
+$maven-colors: (
+  'primary': #DBB6AC,
+  'accent': #66629D,
+  'secondary': #7FA7A1,
+  'foreground': #613842,
+  'background': #130F1B
+);
+
+@function maven-color($key: 'primary') {
+  @return map-get($maven-colors, $key);
+}
+
+$bg-image: url('https://images4.alphacoders.com/884/884373.png');
+
+body {
+  background: {
+    image: $bg-image;
+    repeat: no-repeat;
+    attachment: fixed;
+    size: 100%;
+  }
+  color: maven-color('primary');
+}
